@@ -1,0 +1,61 @@
+<div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-md="space-around center"
+    fxLayoutGap="10px" 
+    fxLayoutGap.xs="0">
+
+  <div fxFlex="40">
+    
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title><b>{{dish1.name|uppercase}}</b></mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src={{dish1.image}} alt={{dish1.name}}>
+      <mat-card-content><p>{{ dish1.description }}</p></mat-card-content>
+      <mat-card-actions>
+        <button mat-button> LIKE </button>
+        <button mat-button> SHARE </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div fxFlex="40">
+
+    <mat-list *ngIf="dish1">
+      <b>Comments</b>
+      <mat-list-item>
+        <p mat-line>{{dish1.comments[0].comment}}</p>
+        <p mat-line>{{dish1.comments[0].rating}}</p>
+        <p mat-line>--&nbsp;&nbsp;{{dish1.comments[0].author}}&nbsp;{{dish1.comments[0].date|date}}</p>
+      </mat-list-item>
+
+      <mat-list-item>
+        <p mat-line>{{dish1.comments[1].comment}}</p>
+        <p mat-line>{{dish1.comments[1].rating}}</p>
+        <p mat-line>--&nbsp;&nbsp;{{dish1.comments[1].author}}&nbsp;{{dish1.comments[1].date|date}}</p>
+      </mat-list-item>
+
+      <mat-list-item>
+        <p mat-line>{{dish1.comments[2].comment}}</p>
+        <p mat-line>{{dish1.comments[2].rating}}</p>
+        <p mat-line>--&nbsp;&nbsp;{{dish1.comments[2].author}}&nbsp;{{dish1.comments[2].date|date}}</p>
+      </mat-list-item>
+
+      <mat-list-item>
+        <p mat-line>{{dish1.comments[3].comment}}</p>
+        <p mat-line>{{dish1.comments[3].rating}}</p>
+        <p mat-line>--&nbsp;&nbsp;{{dish1.comments[3].author}}&nbsp;{{dish1.comments[3].date|date}}</p>
+      </mat-list-item>
+
+      <mat-list-item>
+        <p mat-line>{{dish1.comments[4].comment}}</p>
+        <p mat-line>{{dish1.comments[4].rating}}</p>
+        <p mat-line>--&nbsp;&nbsp;{{dish1.comments[4].author}}&nbsp;{{dish1.comments[4].date|date}}</p>
+      </mat-list-item>
+
+    </mat-list>
+  </div>
+
+</div>
